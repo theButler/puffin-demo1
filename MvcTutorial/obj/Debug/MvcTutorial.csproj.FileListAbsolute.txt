@@ -1,0 +1,7 @@
+c:\users\tim\documents\visual studio 2010\Projects\MvcTutorial\MvcTutorial\bin\MvcTutorial.dll
+c:\users\tim\documents\visual studio 2010\Projects\MvcTutorial\MvcTutorial\bin\MvcTutorial.pdb
+c:\users\tim\documents\visual studio 2010\Projects\MvcTutorial\MvcTutorial\bin\EntityFramework.dll
+c:\users\tim\documents\visual studio 2010\Projects\MvcTutorial\MvcTutorial\bin\EntityFramework.xml
+c:\users\tim\documents\visual studio 2010\Projects\MvcTutorial\MvcTutorial\obj\Debug\ResolveAssemblyReference.cache
+c:\users\tim\documents\visual studio 2010\Projects\MvcTutorial\MvcTutorial\obj\Debug\MvcTutorial.dll
+c:\users\tim\documents\visual studio 2010\Projects\MvcTutorial\MvcTutorial\obj\Debug\MvcTutorial.pdb
