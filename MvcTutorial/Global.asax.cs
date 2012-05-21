@@ -31,10 +31,14 @@ namespace MvcTutorial
 
         protected void Application_Start()
         {
+            System.Data.Entity.Database.SetInitializer(
+               new MvcTutorial.Models.SampleData());
             AreaRegistration.RegisterAllAreas();
-
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
+            AreaRegistration.RegisterAllAreas();
+
+           
         }
     }
 }

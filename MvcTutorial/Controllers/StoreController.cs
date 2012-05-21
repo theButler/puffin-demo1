@@ -3,29 +3,36 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MvcTutorial.Models;
 
 namespace MvcTutorial.Controllers
 {
+      [Authorize(Roles = "Administrator")]
     public class StoreController : Controller
     {
-        //
-        // GET: /Store/
-        public string Index()
+        MusicStoreEntities storeDB = new MusicStoreEntities();
+
+        public ActionResult Index()
         {
-            return "Hello from Store.Index()";
+            var genres = storeDB.Genres.ToList();
+            return View(genres);
         }
         //
         // GET: /Store/Browse
-        public string Browse(string genre)
+        public ActionResult Browse(string genre)
         {
-            string message = "Store + browse + " + HttpUtility.HtmlEncode(genre);
-            return message;
+            // Retrieve Genre and its Associated Albums from database
+            var genreModel = storeDB.Genres.Include("Albums")
+                .Single(g => g.Name == genre);
+
+            return View(genreModel);
         }
         //
         // GET: /Store/Details
-        public string Details(int id)
+        public ActionResult Details(int id)
         {
-            return "Hello from Store.Details()" + id;
+            var album = new Album { Title = "Album " + id };
+            return View(album);
         }
 
     }

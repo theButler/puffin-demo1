@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace MvcTutorial.Controllers
 {
+    [Authorize(Roles = "Administrator")]
     public class HomeController : Controller
     {
         //
